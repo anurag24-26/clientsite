@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-import Logo from "../assets/logo.jpg"; // Adjust the path to your logo image
+import Logo from "../assets/logo.jpg";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -16,36 +18,41 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-gradient-to-r from-yellow-100 via-red-100 to-blue-100 shadow-md fixed top-0 w-full z-50">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-        {/* Logo (you can replace this text with an image/logo later) */}
-        <Link to="/" className="flex items-center space-x-2">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-md">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2">
           <img
             src={Logo}
             alt="Logo"
-            className="w-10 h-10 rounded-full object-cover border-2 border-red-500"
+            className="w-10 h-10 rounded-full border-2 border-red-500 shadow-md"
           />
-          <span className="text-red-600 font-bold text-lg hidden sm:inline">
+          <span className="text-xl font-extrabold text-red-600 tracking-wide hidden sm:inline">
             NKCC
           </span>
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex gap-6">
           {navItems.map((item, index) => (
             <Link
               key={index}
               to={item.path}
-              className="text-gray-800 font-medium hover:text-red-600"
+              className={`text-gray-800 font-medium hover:text-red-600 transition duration-200 ${
+                location.pathname === item.path ? "text-red-600 font-bold" : ""
+              }`}
             >
               {item.name}
             </Link>
           ))}
         </div>
 
-        {/* Mobile Menu Toggle */}
+        {/* Hamburger for Mobile */}
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-xl">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-2xl text-red-600 focus:outline-none"
+          >
             {isOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
@@ -53,12 +60,14 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white px-4 py-2 space-y-2 shadow">
+        <div className="md:hidden bg-white px-6 py-4 space-y-4 shadow-lg animate-fade-down">
           {navItems.map((item, index) => (
             <Link
               key={index}
               to={item.path}
-              className="block text-gray-700 font-medium hover:text-red-600"
+              className={`block text-gray-800 font-medium hover:text-red-600 transition ${
+                location.pathname === item.path ? "text-red-600 font-bold" : ""
+              }`}
               onClick={() => setIsOpen(false)}
             >
               {item.name}

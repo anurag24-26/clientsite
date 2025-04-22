@@ -6,19 +6,22 @@ const facultyList = [
     name: "Mr. Rajnish Dubey",
     subjects: ["Physics", "Math"],
     experience: "8+ years",
-    photo: null,
+    photo:
+      "https://scontent-del2-1.xx.fbcdn.net/v/t39.30808-6/257939369_4353539168089882_6387013506004288017_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Po21UyMAKdUQ7kNvwHiMQXF&_nc_oc=Adkl2ij1yj2bClT7aJ8ztH7IYGQAjXas84GrUyWcDqIMHo-1GYUCH5iULS-HzEc9cMs&_nc_zt=23&_nc_ht=scontent-del2-1.xx&_nc_gid=owaqmTqM7yDDGwnlo-MNAQ&oh=00_AfGZjilW3rfMqz7wruckmCLqolo_wXtgZ8QPAdB2lrzsng&oe=680DC7F3",
   },
   {
     name: "Mr. Durgesh Pandey",
     subjects: ["Biology", "Chemistry", "Physics"],
     experience: "6+ years",
-    photo: null,
+    photo:
+      "https://scontent-del1-1.xx.fbcdn.net/v/t1.6435-9/60335197_832772970401544_3829720036017176576_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=9YTRX7SVS-oQ7kNvwEAQNRl&_nc_oc=AdkJ5-uHFDbpwOci5i5ZqlWWT0eGabra1AnIZS5J20Q0VikyG50n2FayuCyQIwCsuXA&_nc_zt=23&_nc_ht=scontent-del1-1.xx&_nc_gid=k5qyU1v0qb9eGDsI6NQpKw&oh=00_AfGPYrVtLesKOkC9kSxBN5t-Jf1xpCnqFmIFdXDHZkh-Kg&oe=682F6FDA",
   },
   {
     name: "Mr. Abhishek ",
     subjects: ["Commerce"],
     experience: "5+ years",
-    photo: null,
+    photo:
+      "https://scontent-del1-2.xx.fbcdn.net/v/t39.30808-1/332405351_536162648609478_20338765117569309_n.jpg?stp=dst-jpg_p100x100_tt6&_nc_cat=104&ccb=1-7&_nc_sid=e99d92&_nc_ohc=Tc2lgOZkOZwQ7kNvwH06hx-&_nc_oc=AdnT4KkZrmxe82E6-PEdAtMlmzZcd7kFCOE-efRob80zO3abubm6rXA6iN3mgzOjq3s&_nc_zt=24&_nc_ht=scontent-del1-2.xx&_nc_gid=f0pMMB4o2eRjgpwXOF1yPA&oh=00_AfGeB-Df9r20lLE4O3pchVoFSNMolqG-_TerZ41wkCW7nw&oe=680DB53F",
   },
 ];
 
